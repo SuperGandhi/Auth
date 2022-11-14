@@ -24,7 +24,7 @@ class LoginController extends Controller
         }
         $user = Auth::getProvider()->retrieveByCredentials($credentials);
 
-        Auth:login($user);
+        Auth::login($user);
 
         return $this->authenticated($request, $user);
     }
